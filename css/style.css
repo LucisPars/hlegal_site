@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.service_section {
+  background-color: #323264;
+}
+.service_section .wrapper_item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 30px;
+}
+.service_section .wrapper_item .service_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.service_section .wrapper_item .service_list article {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.service_section .wrapper_item .service_list article .description_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.service_section .wrapper_item .service_list article .service_icon {
+  width: 92px;
+  height: 92px;
+  padding: 14px;
+  border-radius: 24px;
+  background-color: #fff;
+}
+.service_section .wrapper_item .service_list article h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #24A3FF;
+  margin: 0;
+}
+.service_section .wrapper_item .service_list article p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff;
+  margin: 0;
+}
+
+.about_title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.about_title a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #24A3FF;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+}
+.about_title h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36.5px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+.about_title .arrow_right {
+  background-color: transparent;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #24A3FF;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=style.css.map */
