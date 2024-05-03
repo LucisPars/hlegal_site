@@ -1,4 +1,5 @@
 @use 'variables.scss' as var;
+@use 'mixins.scss' as mix;
 
 * {
     box-sizing: border-box;
@@ -13,10 +14,11 @@ body {
     padding: 0 30px;
 }
 
-.wrapper_item {
+.wrapper_service {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include mix.centerBlock;
 }
 
 .service_list {
@@ -45,40 +47,20 @@ body {
             color: var.$whiteColor;
         }
 }
-                
+             
 .description_title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
 }
-                
+           
 .service_icon {
     width: 92px;
     height: 92px;
     padding: 14px;
     border-radius: 24px;
     background-color: var.$whiteColor;
-}
-                        
-        
-
-
-@media (min-width: var.$tablet){
-    .service_section {
-    padding: 0 60px;
-}
-.wrapper_item {
-    gap: 60px;
-}
-
-.service_list {
-    gap: 60px;
-    justify-content: space-between;
-        article {
-            width: 45%;
-        }
-}
 }
 
 .about_title {
@@ -122,15 +104,100 @@ body {
         color: transparent;
         margin: 0;
     }
+}
 
-    .arrow_right {
-        background-color: transparent;
-        width: 7px;
-        height: 7px;
-        border: 2px solid var.$headerColor;
-        border-bottom: none;
-        border-left: none;
-        transform: rotate(45deg);
+.arrow_right {
+    background-color: transparent;
+    width: 7px;
+    height: 7px;
+    border: 2px solid var.$headerColor;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+@media (min-width: var.$tabletSD){ // if width is 768px
+
+        .service_section {
+            padding: 0 60px;
+        }
+
+        .wrapper_service {
+            gap: 60px;
+        }
+
+        .service_list {
+            gap: 60px;
+            justify-content: space-between;
+                article {
+                    width: 45%;
+                }
+        }
+}
+@media (min-width: var.$tabletHD){ // if width is 1024px
+    .service_list {
+        article {
+            width: 28%;
+        }
+    }
+}
+@media (min-width: 1720px){
+
+    .wrapper_service {
+        width: 1600px;
+    }
+}
+.wrapper_partners{
+    a {
+        width: 100%;
+        padding: 36px 78px;
+        display: flex;
+        justify-content: center;
     }
 }
 
+@each $color in var.$partners_bg_color {
+    $index: index(var.$partners_bg_color, $color); //я хочу вас попросити, аби ви мені пояснили, як саме це працює на лекції.
+    .wrapper_partners article:nth-child(#{$index}) {
+      background-color: $color;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .wrapper_partners {
+        article:nth-child(n + 7){
+            display: none;
+        }
+      }
+  }
+
+  @media (min-width: var.$tabletSD){
+    .wrapper_partners {
+            display: flex;
+            flex-wrap: wrap;
+            article {
+                width: 33.33%;
+            }
+    }
+    
+  }
+
+  @media (min-width: var.$tabletHD){
+        .wrapper_partners{
+            article {
+                width: 25%;
+            }
+        }
+    }
+
+  .wrapper_partners {
+    @include mix.centerBlock;
+  }
+
+  @media(min-width: 1720px){
+    .wrapper_partners {
+        width: 1720px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+  }
