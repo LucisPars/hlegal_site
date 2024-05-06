@@ -12,6 +12,7 @@ body {
 .service_section {
     background-color: #323264;
     padding: 0 30px;
+    margin-bottom: 60px;
 }
 
 .wrapper_service {
@@ -191,11 +192,17 @@ body {
 }
 
 @media(min-width: 1720px){
-.wrapper_partners {
-    width: 1720px;
-    border-radius: 12px;
-    overflow: hidden;
-}
+    .wrapper_partners {
+        width: 1720px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .wrapper_slider {
+        width: 1600px;
+            .man_picture {
+            height: 298px;      
+    }
+    }
 }
 
 .slider_section {
@@ -204,6 +211,9 @@ padding: 0 30px;
 
 .wrapper_slider {
     @include mix.centerBlock;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .slider_element {
@@ -251,4 +261,72 @@ padding: 0 30px;
             line-height: 22px;
             margin: 0;
         }
+}
+
+.crumbs_wrapper {
+    @include mix.centerBlock;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.circle_item {
+    @include mix.circle;
+    background-color: rgba(36, 163, 255, 0.5);
+}
+
+.circle_item_active {
+    background-color: rgb(36, 163, 255);
+}
+
+.trust h3 {
+    @include mix.centerBlock;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+
+@media(min-width: var.$tabletSD) {
+    .slider_section {
+        padding: 0 60px;
+    }
+}
+
+@media(min-width: var.$tabletHD) {
+    .man_picture {
+        height: 100%;
+    }
+    .slider_element {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 0;
+    }
+    .partner_info {
+        padding: 30px;
+        .title_header {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width: var.$desktopSD) {
+    .man_picture {
+        height: 344px;
+    }
+}
+
+@media (min-width: var.$desktopHD) {
+
 }
