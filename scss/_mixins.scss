@@ -1,3 +1,5 @@
+@use 'variables.scss' as var;
+
 @mixin centerBlock {
     margin-left: auto;
     margin-right: auto;
@@ -13,4 +15,14 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
+}
+
+@mixin arrowRight{
+    background-color: transparent;
+    width: 7px;
+    height: 7px;
+    border: 2px solid var.$headerColor;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
 }

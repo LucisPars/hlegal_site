@@ -1,0 +1,96 @@
+@use 'variables.scss' as var;
+@use 'mixins.scss' as mix;
+@use '../fonts/stylesheet.css';
+
+.wrapper_partners {
+    @include mix.centerBlock;
+        a {
+            width: 100%;
+            padding: 36px 78px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media(min-width: 1720px) {
+        .wrapper_partners {
+            width: 1720px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+
+@each $color in var.$partners_bg_color {
+    $index: index(var.$partners_bg_color, $color); //я хочу вас попросити, аби ви мені пояснили, як саме це працює на лекції.
+    .wrapper_partners article:nth-child(#{$index}) {
+        background-color: $color;
+    }
+}
+
+@media (max-width: 767px) {
+.wrapper_partners {
+    article:nth-child(n + 7){
+        display: none;
+        }
+    }
+}
+
+@media (min-width: var.$tabletSD) {
+.wrapper_partners {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+            width: 33.33%;
+        }
+    }
+}
+
+@media (min-width: var.$tabletHD) {
+    .wrapper_partners{
+        article {
+            width: 25%;
+        }
+    }
+}
+
+@media(min-width: 1720px) {
+    .wrapper_partners {
+        width: 1720px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper_partners {
+        article:nth-child(n + 7){
+            display: none;
+            }
+        }
+    }
+    
+@media (min-width: var.$tabletSD) {
+.wrapper_partners {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+            width: 33.33%;
+        }
+    }
+}
+    
+@media (min-width: var.$tabletHD) {
+    .wrapper_partners{
+        article {
+            width: 25%;
+        }
+    }
+}
+    
+@media(min-width: 1720px) {
+    .wrapper_partners {
+        width: 1720px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+}
