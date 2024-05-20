@@ -11,9 +11,15 @@
     color: transparent;
 }
 
-@mixin circle {
+@mixin circleBig {
     width: 16px;
     height: 16px;
+    border-radius: 50%;
+}
+
+@mixin circleSmall {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
 }
 

@@ -71,7 +71,7 @@
 }
 
 .circle_item {
-    @include mix.circle;
+    @include mix.circleBig;
     background-color: rgba(36, 163, 255, 0.5);
 }
 
